@@ -1,7 +1,6 @@
-$RGname="tfsCompute"
-$extip = curl ipv4.icanhazip.com
-#$rulename="allowAppPort$port"
-$nsgname="ADOCentral-nsg"
+$RGname="RGName"
+$extip = curl ipv4.icanhazip.com ## pulls current external IP into variable, used in RDP ruleset
+$nsgname="NSGName-nsg"
 
 # Get the NSG resource
 $nsg = Get-AzNetworkSecurityGroup -Name $nsgname -ResourceGroupName $RGname
